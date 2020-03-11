@@ -81,8 +81,32 @@ syn keyword ansibleTaskKeyword when contained containedin=ansibleTaskKey
 syn keyword ansibleTaskKeyword with_<lookup_plugin> contained containedin=ansibleTaskKey
 
 
-syn keyword ansibleModule unarchive copy stat user group file get_url slurp lineinfile template state contained containedin=ansibleTaskKey
-
+syn keyword ansibleModule authorized_key contained containedin=ansibleTaskKey
+syn keyword ansibleModule command contained containedin=ansibleTaskKey
+syn keyword ansibleModule copy contained containedin=ansibleTaskKey
+syn keyword ansibleModule expect contained containedin=ansibleTaskKey
+syn keyword ansibleModule file contained containedin=ansibleTaskKey
+syn keyword ansibleModule get_url contained containedin=ansibleTaskKey
+syn keyword ansibleModule git contained containedin=ansibleTaskKey
+syn keyword ansibleModule group contained containedin=ansibleTaskKey
+syn keyword ansibleModule hg contained containedin=ansibleTaskKey
+syn keyword ansibleModule known_hosts contained containedin=ansibleTaskKey
+syn keyword ansibleModule lineinfile contained containedin=ansibleTaskKey
+syn keyword ansibleModule mysql_db contained containedin=ansibleTaskKey
+syn keyword ansibleModule mysql_user contained containedin=ansibleTaskKey
+syn keyword ansibleModule pacman contained containedin=ansibleTaskKey
+syn keyword ansibleModule pause contained containedin=ansibleTaskKey
+syn keyword ansibleModule replace contained containedin=ansibleTaskKey
+syn keyword ansibleModule service contained containedin=ansibleTaskKey
+syn keyword ansibleModule set_fact contained containedin=ansibleTaskKey
+syn keyword ansibleModule shell contained containedin=ansibleTaskKey
+syn keyword ansibleModule slurp contained containedin=ansibleTaskKey
+syn keyword ansibleModule stat contained containedin=ansibleTaskKey
+syn keyword ansibleModule systemd contained containedin=ansibleTaskKey
+syn keyword ansibleModule template contained containedin=ansibleTaskKey
+syn keyword ansibleModule unarchive contained containedin=ansibleTaskKey
+syn keyword ansibleModule user contained containedin=ansibleTaskKey
+syn keyword ansibleModule yaourt contained containedin=ansibleTaskKey
 
 hi link yamlDocumentStart      PreProc
 hi link yamlDocumentEnd        PreProc
