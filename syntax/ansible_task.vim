@@ -35,10 +35,53 @@ syn match yamlItemStart /^\s*\zs-/ contained containedin=yamlValue
 syn match ansibleModuleAttribute /\w\+=/ containedin=yamlValue
 syn match ansibleModuleAttribute /^\s*[^ \t"'#]\+\ze\s*:/ containedin=yamlValue nextgroup=yamlKeyValueDelimiter
 
+syn region yamlComment oneline start='\%\(^\|\s\)#' end='$' contains=yamlTodo
 
-syn keyword ansibleTaskKeyword name when register notify loop contained containedin=ansibleTaskKey
+
+syn keyword ansibleTaskKeyword action contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword any_errors_fatal contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword args contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword async contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword become contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword become_exe contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword become_flags contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword become_method contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword become_user contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword changed_when contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword check_mode contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword collections contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword connection contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword debugger contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword delay contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword delegate_facts contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword delegate_to contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword diff contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword environment contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword failed_when contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword ignore_errors contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword ignore_unreachable contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword local_action contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword loop contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword loop_control contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword module_defaults contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword name contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword no_log contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword notify contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword poll contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword port contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword register contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword remote_user contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword retries contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword run_once contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword tags contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword throttle contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword until contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword vars contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword when contained containedin=ansibleTaskKey
+syn keyword ansibleTaskKeyword with_<lookup_plugin> contained containedin=ansibleTaskKey
+
+
 syn keyword ansibleModule unarchive copy stat user group file get_url slurp lineinfile template state contained containedin=ansibleTaskKey
-syn region  yamlComment oneline start='\%\(^\|\s\)#' end='$' contains=yamlTodo
 
 
 hi link yamlDocumentStart      PreProc
